@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # Set MLflow tracking URI ke lokal
-mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+#mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 mlflow.set_experiment("Telco Customer Churn")
 
 # Load data hasil preprocessing
