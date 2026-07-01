@@ -20,11 +20,11 @@ y_test = test_df["Churn"]
 # Aktifkan autolog
 mlflow.sklearn.autolog()
 
-with mlflow.start_run():
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
-    model.fit(X_train, y_train)
 
-    y_pred = model.predict(X_test)
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
 
-    acc = accuracy_score(y_test, y_pred)
-    print(f"Accuracy: {acc:.4f}")
+y_pred = model.predict(X_test)
+
+acc = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {acc:.4f}")
